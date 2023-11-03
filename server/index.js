@@ -7,7 +7,9 @@ import productRoute from './routes/productRoute.js'
 const app = express();
 dotenv.config();
 
-app.use(express.json())
+// Middleware
+app.use(express.json());
+
 
 // Constants
 const PORT = process.env.PORT || 3002;
@@ -31,7 +33,7 @@ async function start() {
     } catch (error) {
         console.log(error)
     }
-    
+
 }
 
 start()

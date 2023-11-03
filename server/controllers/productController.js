@@ -22,7 +22,17 @@ export const getAllProducts = async (req, res) => {
 
 // Get Product Details
 export const getProductDetails = async (req, res) => {
-    const product = await Product.findById(req.params.id);
+
+    const id = req.params.id;
+
+    if (id.length != 24) {
+        return res.status(500).json({
+            success: false,
+            message: "Product does not exist",
+        })
+    }
+
+    const product = await Product.findById(id);
 
     if (!product) {
         return res.status(500).json({
