@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import cookieParser from 'cookie-parser'
 
 import productRoute from './routes/productRoute.js'
 import userRoute from './routes/userRoute.js'
@@ -10,6 +11,7 @@ dotenv.config();
 
 // Middleware
 app.use(express.json());
+app.use(cookieParser());
 
 
 // Constants
