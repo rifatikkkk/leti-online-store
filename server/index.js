@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 
 import productRoute from './routes/productRoute.js'
 import userRoute from './routes/userRoute.js'
+import orderRoute from './routes/orderRoute.js'
 
 const app = express();
 dotenv.config();
@@ -27,6 +28,11 @@ app.use('/api/product', productRoute);
 
 // http://localhost:3001/api/user
 app.use('/api/user', userRoute);
+
+// http://localhost:3001/api/order
+app.use('/api/order', orderRoute);
+
+
 
 
 async function start() {
