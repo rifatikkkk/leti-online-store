@@ -1,4 +1,5 @@
 import User from '../models/userModel.js'
+import sendToken from '../utils/jwtToken.js';
 
 // Create a new User (Registration)
 export const registerUser = async (req, res) => {
@@ -16,11 +17,32 @@ export const registerUser = async (req, res) => {
         password,
     });
 
-    const token = user.getJWTToken();
+    sendToken(user, 201, res);
+}
 
-    res.status(201).json({
-        success: true,
-        user,
-        token,
-    })
+// Login User
+export const loginUser = async (req, res) => {
+    const { name, password } = req.body;
+
+    if (!name || !password) {
+        return res.status(400).json({
+            message: "Please Enter Name | Password",
+        })
+    }
+
+    const user = await User.findOne({ name }).select("+password");
+    if (!user) {
+        return res.status(404).json({
+            message: "User not found! Try again!",
+        })
+    }
+
+    const isPasswordMatched = user.comparePassword(password);
+    if (!isPasswordMatched) {
+        return res.status(404).json({
+            message: "Incorrect password entered! Try again!",
+        })
+    }
+
+    sendToken(user, 201, res);
 }

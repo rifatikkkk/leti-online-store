@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { registerUser } from "../controllers/userController.js";
+import { loginUser, registerUser } from "../controllers/userController.js";
 
 const router = new Router();
 
@@ -9,5 +9,6 @@ router.post('/register', registerUser);
 
 // Login User
 // http://localhost:3001/api/user/login
+router.post('/login', loginUser);
 
 export default router;
