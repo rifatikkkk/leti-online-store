@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
 import productRoute from './routes/productRoute.js'
+import userRoute from './routes/userRoute.js'
 
 const app = express();
 dotenv.config();
@@ -21,6 +22,10 @@ const DB_NAME = process.env.DB_NAME;
 // Routes
 // http://localhost:3001/api/product
 app.use('/api/product', productRoute);
+
+// http://localhost:3001/api/user
+app.use('/api/user', userRoute);
+
 
 async function start() {
     try {
