@@ -2,7 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser'
-
+import cors from 'cors'
+import fileUpload from 'express-fileupload'
 import productRoute from './routes/productRoute.js'
 import userRoute from './routes/userRoute.js'
 import orderRoute from './routes/orderRoute.js'
@@ -11,7 +12,10 @@ const app = express();
 dotenv.config();
 
 // Middleware
+app.use(cors());
+app.use(fileUpload());
 app.use(express.json());
+app.use(express.static('uploads'))
 app.use(cookieParser());
 
 

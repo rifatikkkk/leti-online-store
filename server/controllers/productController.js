@@ -16,15 +16,16 @@ export const createProduct = async (req, res) => {
 // Get all Products
 export const getAllProducts = async (req, res) => {
 
-    const resultPerPage = 5;
+    // const resultPerPage = 5;
     // const productCount = await Product.countDocuments();
 
-    const apiFeature = new ApiFeatures(Product.find(), req.query)
-        .search()
-        .filter()
-        .pagination(resultPerPage);
+    // const apiFeature = new ApiFeatures(Product.find(), req.query)
+    //     .search()
+    //     .filter()
+    //     .pagination(resultPerPage);
 
-    const products = await apiFeature.query;
+    // const products = await apiFeature.query;
+    const products = await Product.find();
     const countProducts = products.length;
     
     res.status(200).json({

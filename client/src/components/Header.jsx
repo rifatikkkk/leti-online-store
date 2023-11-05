@@ -26,7 +26,7 @@ const Header = () => {
                 </ul>
             </nav>
 
-            <div className="hero-section">
+            {/* <div className="hero-section">
                 <div className="left">
                     <h1>Онлайн-магазин СПБГЭТУ "ЛЭТИ"</h1>
                     <p>Освежи свой стиль с LETI</p>
@@ -40,7 +40,7 @@ const Header = () => {
                 <div className="bg-figure">
                     <img src={require('../images/figure-back.png')} alt="" />
                 </div>
-            </div>
+            </div> */}
         </div>
     </header>
   )
