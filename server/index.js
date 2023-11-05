@@ -34,7 +34,6 @@ app.use('/api/order', orderRoute);
 
 
 
-
 async function start() {
     try {
         await mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_CLUSTER}.xpeso2j.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`)
@@ -46,7 +45,6 @@ async function start() {
     } catch (error) {
         console.log(error)
     }
-
 }
 
 start()

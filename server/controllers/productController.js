@@ -38,6 +38,7 @@ export const getAllProducts = async (req, res) => {
 export const getProductDetails = async (req, res) => {
 
     const id = req.params.id;
+    // const id = req.body.id
 
     if (id.length != 24) {
         return res.status(500).json({

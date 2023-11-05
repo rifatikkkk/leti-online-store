@@ -1,0 +1,480 @@
+:root {
+    --dark-blue-color: #023047;
+    --dark-color: #070917;
+    --light-color: #e8f7fb;
+    --light-blue-color: #6f7dfb;
+    --text-color: #6D6E71;
+    --blue-color: #05336e;
+    --orange-color: #bb8d54;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #F9FBFC;
+}
+
+.wrapper {
+    max-width: 1134px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 24px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn.dark {
+    background: var(--blue-color);
+}
+
+.btn.light {
+    background: var(--orange-color);
+}
+
+
+
+/* Header */
+header {
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1134px;
+    padding: 20px 0;
+    z-index: 100;
+    transition: all 500ms ease;
+}
+
+nav .logo img {
+    width: 120px;
+    height: 120px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li a {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.hero-section .left {
+    flex: 1;
+    z-index: 10
+}
+
+.hero-section .left h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 125%;
+    color: var(--blue-color);
+    margin: 0;
+}
+
+.hero-section .left p {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 200%;
+    color: var(--blue-color);
+    margin: 10px 0 0 0;
+    width: 457px;
+    margin-bottom: 10px;
+}
+
+.hero-section .right {
+    align-self: flex-end;
+    z-index: 10;
+}
+
+.hero-section .right img {
+    height: 650px;
+    margin-left: 100px;
+    vertical-align: middle;
+}
+
+/* Background Figure */
+
+.bg-figure {
+    position: absolute;
+    z-index: 0;
+    left: 54%;
+}
+
+/* Statics */
+
+.stat-section {
+    background: var(--blue-color);
+    padding: 50px;
+}
+
+.stat {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.stat .stat-text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat .stat-text h3 {
+    margin: 0;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.stat .stat-text h4 {
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* Prod Section */
+
+.prod-section {
+    padding: 50px 0;
+    padding-bottom: 50px;
+}
+
+.prod-section h2 {
+    text-align: center;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+    color: var(--blue-color);
+}
+
+.prod-section .prod-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prod-section .prod-cards img {
+    width: 100%;
+    max-width: 280px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.20));
+    border-radius: 24px;
+}
+
+.prod-section .prod-card {
+    background: #fff;
+    border-radius: 30px;
+    padding: 5px 28px 0px;
+    margin: 40px 0;
+    position: relative;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.prod-section .prod-card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prod-section .prod-card .prod-info h3 {
+    white-space: normal;
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.prod-section .prod-card .prod-info h6 {
+    margin: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+.prod-section .prod-card .btn {
+    padding: 14px 30px;
+    margin-top: 10px;
+    border-radius: 24px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 103%;
+    transform: translate(-50%, -103%);
+}
+
+/* Order Section */
+
+.order-section {
+    background: var(--orange-color);
+}
+
+.order-part {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-section .left {
+    flex: 1;
+    z-index: 10
+}
+
+.order-section .left .head {
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    color: var(--blue-color);
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.order-section .left .action-cards {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 580px;
+}
+
+.order-section .left .action-card {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    border-radius: 16px;
+    padding: 6px 16px;
+    align-items: center;
+    color: var(--text-color);
+    position: relative;
+}
+
+.order-section .left .action-card:nth-child(odd):not(:last-child)::before {
+    display: inline-block;
+    content: url('./images/vector-left.png');
+    position: absolute;
+    transform: scale(.7);
+    left: -50px;
+    top: 5px;
+}
+
+.order-section .left .action-card:nth-child(even)::after {
+    display: inline-block;
+    content: url('./images/vector-right.png');
+    text-align: right;
+    position: absolute;
+    transform: scale(.7);
+    right: -50px;
+    top: 5px;
+}
+
+
+.order-section .left .action-card h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    margin: 0;
+    padding-right: 20px;
+    position: relative;
+}
+
+.order-section .left .action-card h1::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    top: 1px;
+    bottom: 1px;
+    left: 56px;
+    background: var(--text-color);
+}
+
+.order-section .left .action-card h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+.order-section .right {
+    align-self: center;
+}
+
+.order-section .right img {
+    height: 450px;
+    vertical-align: middle;
+}
+
+/* Review Section */
+.review-section {
+    padding: 20px 0 0 0;
+}
+
+.review-section h2 {
+    text-align: center;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+    color: var(--blue-color);
+}
+
+.review-section .review-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-section .review-card {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review-section .review-card .review-text {
+    background: var(--blue-color);
+    border-radius: 26px;
+    padding: 60px;
+}
+
+.review-section .review-card .review-text h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.review-section .review-card h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--blue-color);
+}
+
+.review-section .review-card .review-avatar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 52%;
+    border: 3px solid #fff;
+    border-radius: 24px;
+}
+
+.review-section .review-card .review-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: fill;
+}
+
+/* Footer */
+footer {
+    background: var(--text-color);
+    color: #fff;
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer h3 {
+    color: var(--blue-color);
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+footer ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .links-container {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+}
+
+footer .links-container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .links-container .logo img{
+    width: 60%;
+}
+
+footer .social {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .social a {
+    margin: 20px 0;
+    padding: 0;
+}
+
+footer .copyright {
+    margin: 0
+}
