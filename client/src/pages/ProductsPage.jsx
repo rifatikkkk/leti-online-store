@@ -9,13 +9,13 @@ const ProductsPage = () => {
     const dispatch = useDispatch();
     const { products } = useSelector((state) => state.products);
     console.log(products)
-    // const { isAuthenticated } = useSelector((state) => state.user);
-    // const [condition, setCondition] = useState('Необходимо авторизоваться');
+    const { isAuthenticated } = useSelector((state) => state.user);
+    const [condition, setCondition] = useState('Необходимо авторизоваться');
 
     useEffect(() => {
         dispatch(getProduct());
-        // isAuthenticated == true ? setCondition('Добавить в корзину') : setCondition('Необходимо авторизоваться');
-    }, [dispatch])
+        isAuthenticated == true ? setCondition('В корзину') : setCondition('Необходимо авторизоваться');
+    }, [dispatch, isAuthenticated])
 
     return (
         <Fragment>
@@ -26,7 +26,7 @@ const ProductsPage = () => {
                         {products && products.map(product => {
                             if (product.stock >= 1) {
                                 return (
-                                    <ProductItem product={product} condition="Some text" />
+                                    <ProductItem product={product} condition={condition} />
                                 )
                             }
                         })}

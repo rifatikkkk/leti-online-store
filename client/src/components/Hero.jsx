@@ -7,7 +7,7 @@ const Hero = () => {
                 <div className="left">
                     <h1>Онлайн-магазин СПБГЭТУ "ЛЭТИ"</h1>
                     <p>Освежи свой стиль с LETI</p>
-                    <a href="#" class="btn light inproduct-icon">К ТОВАРАМ</a>
+                    <a href="#" class="btn light inproduct-icon">К товарам</a>
                 </div>
 
                 <div className="right">

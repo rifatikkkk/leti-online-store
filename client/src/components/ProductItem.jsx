@@ -13,7 +13,7 @@ const ProductItem = ({ product, condition }) => {
         <h5>{product.name}</h5>
         <h4>{product.price} рублей</h4>
       </div>
-      <a href="#" className='btn light'>В корзину</a>
+      <a href="#" className='btn light'>{condition}</a>
     </a>
 
   )
