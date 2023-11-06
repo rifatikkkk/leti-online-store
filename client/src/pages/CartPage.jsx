@@ -67,12 +67,14 @@ const CartPage = () => {
         totalPrice = 0
         const data = JSON.parse(window.localStorage.getItem('cartItems'));
         console.log(data);
-        data.forEach(element => {
-            totalPrice += element.price * element.quantity
-        });
-        console.log(totalPrice)
-        document.querySelector('div.total-price').innerHTML = `Итого: <b>${totalPrice}</b> рублей`
-        return totalPrice
+        if (data) {
+            data.forEach(element => {
+                totalPrice += element.price * element.quantity
+            });
+            console.log(totalPrice)
+            document.querySelector('div.total-price').innerHTML = `Итого: <b>${totalPrice}</b> рублей`
+            return totalPrice
+        }
     }
 
     useEffect(() => {

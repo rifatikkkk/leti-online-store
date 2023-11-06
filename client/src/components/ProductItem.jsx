@@ -8,9 +8,10 @@ const ProductItem = ({ product, condition }) => {
 
   const addToCartHandle = () => {
     if (condition === 'В корзину') {
-      console.log(idProductSelect)
+      // console.log(idProductSelect)
       console.log('Add item to cart')
-      dispatch(addItemsToCart(idProductSelect))
+      console.log(product._id)
+      dispatch(addItemsToCart(product._id))
     }
     else {
       console.log('Не получилось добавить, авторизуйтесь');
@@ -21,7 +22,7 @@ const ProductItem = ({ product, condition }) => {
 
 
   return (
-    <a className="product-item" href={"/product/" + product._id}>
+    <a className="product-item" href='#'>
       <img src={`http://localhost:3001/${product.images[0].url}`} alt="" />
       <div className="product-desc">
         <span>{product.category}</span>

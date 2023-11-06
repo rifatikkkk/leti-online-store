@@ -497,6 +497,15 @@ footer .copyright {
     padding-top: 150px;
 }
 
+.products-section .products-input {
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: 3px solid var(--blue-color);
+}
+
 .products-section .products-container {
     display: flex;
     justify-content: space-between;
@@ -511,7 +520,7 @@ footer .copyright {
     width: 30%;
     min-width: 250px;
     padding: 10px 12px;
-    border: 1px solid var(--blue-color);
+    border: 2px solid var(--blue-color);
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);

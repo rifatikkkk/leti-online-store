@@ -63,7 +63,8 @@ export const addItemsToCart = createAsyncThunk(
                 });
 
                 if (available) {
-                    console.log('товар имеется в корзине уже')
+                    // console.log('товар имеется в корзине уже')
+                    window.alert("Товар уже имеется в корзине.")
                 }
                 else {
                     getData.push({
@@ -75,6 +76,7 @@ export const addItemsToCart = createAsyncThunk(
                     })
                     console.log(getData)
                     window.localStorage.setItem('cartItems', JSON.stringify(getData))
+                    window.alert("Товар успешно добавление в корзину!")
                     return getData
                 }
             }
