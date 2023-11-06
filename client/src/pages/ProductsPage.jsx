@@ -8,7 +8,6 @@ const ProductsPage = () => {
 
     const dispatch = useDispatch();
     const { products } = useSelector((state) => state.products);
-    console.log(products)
     const { isAuthenticated } = useSelector((state) => state.user);
     const [condition, setCondition] = useState('Необходимо авторизоваться');
 

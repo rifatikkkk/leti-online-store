@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import ProductsPage from './pages/ProductsPage';
 import Authorization from './pages/Authorization';
-import OrderPage from './pages/OrderPage';
+import CartPage from './pages/CartPage';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Route path='*' element={<Main />} />
       <Route path='/products' element={<ProductsPage />} />
       <Route path='/authorization' element={<Authorization />} />
-      <Route path='/orders' element={<OrderPage />} />
+      <Route path='/orders' element={<CartPage />} />
     </Routes>
   )
 }
