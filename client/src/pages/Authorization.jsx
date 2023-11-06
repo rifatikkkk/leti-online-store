@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import { useDispatch, useSelector } from 'react-redux'
 import { loginUser, registerUser, } from '../redux/slice/userSlice'
 import { useNavigate } from 'react-router-dom'
+import MetaData from '../components/MetaData'
 
 const Authorization = () => {
     const dispatch = useDispatch();
@@ -56,6 +57,7 @@ const Authorization = () => {
 
     return (
         <Fragment>
+            {isActive ? <MetaData title='Авторизация'/> : <MetaData title='Регистрация' />}
             <Header />
             <div className="wrapper">
                 <div className="auth-section">

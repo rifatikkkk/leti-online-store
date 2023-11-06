@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import axios from '../utils/axios.js'
 import { clearItemsCart, editItemsCart } from '../redux/slice/cartSlice.js'
+import MetaData from '../components/MetaData.js'
 
 const CartPage = () => {
     const dispatch = useDispatch();
@@ -50,7 +51,7 @@ const CartPage = () => {
             countPrice()
         }
     }
-    
+
     const removeItem = (itemProduct) => {
         editCartItems.filter((a, i) => {
             if (itemProduct == a.product) {
@@ -119,6 +120,7 @@ const CartPage = () => {
 
     return (
         <Fragment>
+            <MetaData title='Корзина' />
             <Header />
             <div className="wrapper">
                 <div className="cart-container">

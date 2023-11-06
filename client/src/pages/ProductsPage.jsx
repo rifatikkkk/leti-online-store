@@ -4,6 +4,7 @@ import { getProduct } from '../redux/slice/productSlice';
 import Header from '../components/Header';
 import ProductItem from '../components/ProductItem';
 import axios from '../utils/axios.js'
+import MetaData from '../components/MetaData.js';
 
 const ProductsPage = () => {
 
@@ -36,6 +37,7 @@ const ProductsPage = () => {
 
     return (
         <Fragment>
+            <MetaData title='Товары' />
             <Header />
             <div className="wrapper">
                 <div className="products-section">
