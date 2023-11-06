@@ -14,6 +14,7 @@ const ProductItem = ({ product, condition }) => {
     }
     else {
       console.log('Не получилось добавить, авторизуйтесь');
+      window.alert("Ошибка добавления товара в корзину. Авторизуйтесь!")
     }
   }
 
