@@ -31,11 +31,11 @@ export const loginUser = createAsyncThunk(
             }
 
         } catch (error) {
-            // return error?.response?.data?.message;
             console.log(error?.response?.data?.message)
+            window.alert(error?.response?.data?.message)
         }
     },
-)
+    )
 
 //  Register User
 export const registerUser = createAsyncThunk(
@@ -51,8 +51,11 @@ export const registerUser = createAsyncThunk(
                 window.localStorage.setItem('user', JSON.stringify(data.user))
             }
             return data
+
         } catch (error) {
             console.log(error?.response?.data?.message)
+            window.alert(error?.response?.data?.message)
+            throw error
         }
     },
 )
@@ -65,6 +68,7 @@ export const logoutUser = createAsyncThunk(
             await axios.get('/user/logout');
             window.localStorage.removeItem('token');
             window.localStorage.removeItem('user');
+            window.localStorage.removeItem('cartItems');
         } catch (error) {
             console.log(error?.response?.data)
         }

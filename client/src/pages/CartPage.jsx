@@ -50,7 +50,7 @@ const CartPage = () => {
             countPrice()
         }
     }
-
+    
     const removeItem = (itemProduct) => {
         editCartItems.filter((a, i) => {
             if (itemProduct == a.product) {
@@ -60,6 +60,7 @@ const CartPage = () => {
             }
         })
         dispatch(editItemsCart(editCartItems))
+        countPrice()
     }
 
     const countPrice = () => {

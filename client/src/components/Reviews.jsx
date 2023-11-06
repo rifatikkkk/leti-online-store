@@ -16,10 +16,10 @@ const Reviews = () => {
                     </div>
 
                     <div className="review-avatar">
-                        <img src={require('../images/rifatikkkk-pic.jpg')} alt="" />
+                        <img src={require('../images/angelinaaaa-pic.jpg')} alt="" />
                     </div>
 
-                    <h2>Ильбульдин Рифат</h2>
+                    <h2>Ангелина Никитина</h2>
                 </div>
                 <div className="review-card">
                     <div className="review-text">
@@ -29,10 +29,10 @@ const Reviews = () => {
                     </div>
 
                     <div className="review-avatar">
-                        <img src={require('../images/angelinaaaa-pic.jpg')} alt="" />
+                        <img src={require('../images/rifatikkkk-pic.jpg')} alt="" />
                     </div>
 
-                    <h2>Ангелина Никитина</h2>
+                    <h2>Рифат Ильбульдин</h2>
                 </div>
             </div>
         </div>

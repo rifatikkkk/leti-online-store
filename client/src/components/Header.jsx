@@ -16,9 +16,11 @@ const Header = () => {
         <header>
             <div className="wrapper">
                 <nav>
-                    <div className="logo">
-                        <img src={require('../images/logo-krug.png')} alt="" />
-                    </div>
+                    <a href="/">
+                        <div className="logo" href='/'>
+                            <img src={require('../images/logo-krug.png')} alt="" />
+                        </div>
+                    </a>
                     <ul>
                         <li>
                             <a href="/">Главная</a>

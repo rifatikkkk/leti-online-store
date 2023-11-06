@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="wrapper">
                 <div className="links-container">
                     <div className="logo">
-                        <img src={require('../images/logo-vertik.png')} alt="" />
+                        <img src={require('../images/logo-vertik.png')} alt="" href='/'/>
                     </div>
 
                     <div className="links">
@@ -14,13 +14,13 @@ const Footer = () => {
 
                         <ul>
                             <li>
-                                <a href="#">Главная</a>
+                                <a href="/">Главная</a>
                             </li>
                             <li>
-                                <a href="#">О нас</a>
+                                <a href="/about">О нас</a>
                             </li>
                             <li>
-                                <a href="#">Товары</a>
+                                <a href="/products">Товары</a>
                             </li>
                         </ul>
                     </div>
