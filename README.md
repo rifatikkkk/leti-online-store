@@ -11,6 +11,5 @@
 2. Запустите клиент: npm run start
 
 Все данные для взаимодействия с БД Вы можете найти в серверной части в файле .env
-Для подключение через MongoDB Compass используйте следующую строку подключения: mongodb+srv://admin:kmQbNquPD5hBSvoI@clusterleti.xpeso2j.mongodb.net/
 
 С уважением!
